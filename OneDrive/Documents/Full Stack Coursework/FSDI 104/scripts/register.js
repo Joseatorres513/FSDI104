@@ -17,6 +17,44 @@ function Pet(name, age, gender, breed, service, type) {
     this.service = service;
     this.type = type;
 }
+
+//validations
+function isValid(pet) {
+    let validation = true;
+    let inputName = document.getElementById("txtName");
+    let inputAge = document.getElementById("txtAge");
+    let inputGender = document.getElementById("txtGender");
+    let inputBreed = document.getElementById("txtBreed");
+    let inputService = document.getElementById("txtService");
+
+    if (pet.name == "") {
+        validation = false
+        inputName.classList.add("error");
+    }
+
+    if (pet.age == "") {
+        validation = false;
+        inputAge.classList.add("error");
+
+    }
+    if (pet.gender == "") {
+        validation = false;
+        inputAge.classList.add("error");
+
+    }
+    if (pet.breed == "") {
+        validation = false;
+        inputAge.classList.add("error");
+
+    }
+    if (pet.service == "") {
+        validation = false;
+        inputAge.classList.add("error");
+
+    }
+
+    return validation;
+}
 // Define the Dog class (or constructor function)
 class Dog {
     constructor(name, age, gender, breed, service) {
@@ -51,17 +89,33 @@ class Bird {
 //add breed and service
 //register function
 function register() {
-    let inputName = document.getElementById("txtName").ariaValueMax;
-    let inputAge = document.getElementById("txtAge").ariaValueMax;
-    let inputGender = document.getElementById("txtGender").ariaValueMax;
-    let inputBreed = document.getElementById("txtBreed").ariaValueMax;
-    let inputService = document.getElementById("txtService").ariaValueMax;
-    let inputType = document.getElementById("txtType").ariaValueMax;
+    let inputName = document.getElementById("txtName").value;
+    let inputAge = document.getElementById("txtAge").value;
+    let inputGender = document.getElementById("txtGender").value;
+    let inputBreed = document.getElementById("txtBreed").value;
+    let inputService = document.getElementById("txtService").value;
+    let inputType = document.getElementById("txtType").value;
 
     console.log(inputName, inputAge, inputGender, inputBreed, inputService, inputType);
+
     // create the obj
+    let newPet = new Pet(inputName, inputAge, inputGender, inputBreed, inputService);
+    console.log("newPet = ", newPet);
+
+    // check validations
+    if (isValid(newPet) == true) {
+        //push the obj to the array
+        pets.push(newPet);
+        displayRow();
+        //clear an input: document.getElementById("txtName").value="";
+        //display the obj on the console
+        console.log(pets);
+
+        clearForm();
+    }
+
     // create the appropriate pet object based on the type NEW OBJECT
-    let newPet;
+    //let newPet;
     if (inputType === "dog") {
         newPet = new Dog(inputName, inputAge, inputGender, inputBreed, inputService);
     } else if (inputType === "cat") {
@@ -106,6 +160,8 @@ function init() {
 
     pets.push(pet1, pet2, pet3);
     console.log(pet1, pet2, pet3);
+
+    displayRow();
 }
 
 window.onload = init;//wait to rend the HTML

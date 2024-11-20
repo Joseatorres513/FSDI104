@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f9fa;
+    background-color: lightsalmon;
     padding-top: 20px;
 }
 
@@ -52,4 +52,18 @@ h2 {
 /* Add some padding to form sections */
 .container-sm {
     padding: 15px;
+}
+
+.btn-danger {
+    background-color: grey;
+    justify-content: center;
+}
+
+.card-body {
+    background-color: bisque;
+    text-emphasis-color: white;
+}
+
+.error {
+    background-color: rgb(255, 179, 179);
 }
