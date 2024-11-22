@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Services - Your Pet Your Style</title>
+    <style>
+        /* Styling for the left and right images */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .side-image {
+            width: 15%;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+        }
+
+        .left-image {
+            left: 0;
+        }
+
+        .right-image {
+            right: 0;
+        }
+
+        header {
+            z-index: 10;
+            position: relative;
+        }
+
+        footer {
+            z-index: 10;
+            position: relative;
+        }
+
+        .main-content {
+            flex: 1;
+            margin: 0 17%; /* Leave space for side images co pilot */
+            padding: 20px;
+            background-color: #fce5cd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 5; /* Ensure it is below header and footer - used copilot*/
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Your Pet Your Style</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Left Side Image -->
+    <img src="./img/services2.jpeg" alt="Pet Grooming" class="side-image left-image">
+
+    <!-- Right Side Image -->
+    <img src="./img/services3.jpg" alt="Clean Pup" class="side-image right-image">
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="text-center">Our Services</h1>
+        <div>
+            <h2>Grooming Your Way</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur facere accusamus fuga iure quibusdam at autem voluptate fugiat sunt ut blanditiis aliquam deleniti repellat ullam, sequi est optio! Officiis omnis quam rerum eveniet odio! Aliquid quibusdam laboriosam, tempore voluptatum maxime beatae asperiores quasi temporibus dolores distinctio nobis officiis aliquam modi! Corporis assumenda eos tempore vitae expedita consequatur ratione debitis vero cumque doloribus dolore cum, numquam ea veritatis fugit non exercitationem delectus veniam. Modi facilis non iste excepturi nisi reiciendis voluptatum totam sit recusandae blanditiis doloribus fuga fugiat, iure expedita ad obcaecati illo perspiciatis distinctio architecto commodi aliquam? Neque ratione odit, tempore mollitia sapiente debitis et nobis recusandae totam consequatur eligendi assumenda dignissimos repellendus, magni possimus quaerat quae illum. Obcaecati facere, atque repellendus vitae voluptates blanditiis assumenda suscipit! Voluptate, saepe eum temporibus amet aliquid quidem facere totam magnam consectetur dolorem quod qui, reprehenderit illum optio quos repellat a impedit placeat. Velit, illum. Alias fugiat eius accusantium facilis dolor, ducimus architecto reiciendis voluptate cumque odit, quod labore ipsam, consequatur minus nesciunt corrupti minima repellat dolorem corporis atque repellendus. Natus aliquid quasi est, eum, dolore reprehenderit quidem sit cum, cupiditate omnis possimus odit laborum officiis quia nam saepe molestiae exercitationem nemo? Deserunt odio, voluptatibus, quisquam nobis nostrum dolorem dolorum soluta quasi corporis quis vero, numquam laborum natus veniam quam! Excepturi eum veniam, ipsum asperiores quae alias quo necessitatibus dolore deleniti libero voluptates, doloremque esse deserunt officia dolorem, est fugit porro? Minus illo dolorum assumenda distinctio. Voluptatum, perferendis unde aliquid blanditiis animi facere molestias quaerat accusamus, ratione corporis iure vero sit laudantium doloremque magni nobis expedita veniam vel dignissimos illum dicta tenetur. Veniam error sapiente odit eum officiis illo voluptatibus reiciendis ducimus laborum. Culpa exercitationem, aliquid eos deleniti iusto eaque quod ipsam nulla dolore animi totam repellat quisquam minus voluptates qui nam incidunt?
+            </p>
+            <a href="register.html" class="btn btn-warning btn-lg d-block mt-3" style="font-size: 2rem; padding: 15px 30px;">Register For More Information</a>
+        </div>
+        <br>
+        <div>
+            <h2>Licensed Professionals Will Vaccinate Your Pet</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum aperiam aspernatur amet nostrum mollitia numquam, quidem ex, dolorum totam itaque ipsa quod, pariatur suscipit soluta quis! Dolor doloremque pariatur error qui laudantium. Minus similique consequatur eum dolores provident veritatis sint eos omnis nihil repudiandae. Omnis reiciendis dolore officiis dolorum architecto nemo nihil eaque non fuga aliquam neque, quia perferendis! Quibusdam architecto similique pariatur dicta facere numquam eaque corrupti neque nesciunt sequi! Iure, unde necessitatibus repellat quisquam sit alias quo minus a fuga sed sequi cumque atque reprehenderit optio magnam in, tempora maxime ipsam accusamus corporis quidem rem consequuntur at? Nesciunt beatae cum animi veritatis iure sed sequi, quod, impedit rem a asperiores aliquam doloremque. Consectetur enim quo omnis veniam neque molestiae architecto voluptatem optio atque deserunt, molestias porro odit distinctio vitae minima sint. Quas sed obcaecati nostrum quod molestias aperiam accusamus, magni in ipsam harum similique voluptatum quo dolorem alias quae labore repellat voluptatem quasi esse incidunt. Necessitatibus, commodi qui inventore obcaecati, cum voluptatem accusamus hic minus, aspernatur saepe eligendi eum neque quis nostrum deleniti blanditiis! Cum deserunt assumenda, rerum similique pariatur doloremque nulla suscipit beatae temporibus quae neque dolor repellat, maxime officia a possimus vel! Doloremque praesentium rerum nobis eligendi libero, dolores quidem culpa hic minus, minima sunt est amet laborum accusantium quasi nulla repudiandae, quo alias doloribus? Cupiditate illo corrupti nihil debitis provident, sapiente vero facere incidunt ad? Quod, repellendus recusandae! Laboriosam possimus non at modi quisquam ratione hic eaque dicta dolor, eligendi recusandae? Fugiat accusamus similique quisquam!
+            </p>
+            <br>
+            <h5>Disclaimer - We are not a Veterinary Service Replacement</h5> <a href="register.html" class="btn btn-warning btn-lg d-block mt-3" style="font-size: 2rem; padding: 15px 30px;">Register For More Information</a>
+        </div>
+        <br>
+        <div>
+            <h2>We Are Very Good With Nails</h2>
+            <h5>We highly recommend Grooming services for Your Pets to become comfortable with staff.</h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem laboriosam, cum, necessitatibus consequatur similique est veritatis dolore, repudiandae ipsam fuga nemo. Eum quidem, voluptate, aut minima ipsum nulla animi odio maiores ea magnam consectetur commodi voluptatum excepturi quo eveniet laudantium labore. Ullam, rerum mollitia inventore est ipsum itaque porro dolorem modi consequatur quaerat dolor iure excepturi optio magni omnis voluptate ipsa ut repellat. Omnis expedita veniam, est repellat exercitationem excepturi laborum nihil aspernatur blanditiis minus perspiciatis, in a esse repellendus. Atque tempora quo maiores. Animi voluptate doloribus labore accusamus, velit corrupti alias, tenetur omnis totam ducimus illum nulla incidunt, veritatis hic dolorem. Quibusdam laudantium voluptatem ea nemo iusto! Tempore magnam doloribus repellat omnis dolore! Incidunt non sit ad dolorem quod optio cumque minus nesciunt dolorum, laudantium voluptate aperiam magnam sunt ipsam ratione. Exercitationem ratione delectus nulla, non illum, sequi repudiandae laudantium in suscipit esse vel harum illo pariatur nisi distinctio! Laborum natus maiores esse. Ad asperiores, ratione sint quis esse aperiam pariatur temporibus laudantium nobis unde perspiciatis quisquam accusamus eius voluptas error totam magni porro libero perferendis iure maiores sed molestiae sit! Unde esse debitis laborum vitae, maiores totam quia distinctio ad laudantium exercitationem modi nam tempore ipsum ratione velit quidem repellendus non veritatis earum inventore atque facilis. Enim nihil voluptas quasi itaque sint explicabo placeat velit tempora sit consequuntur, expedita neque consectetur facere odio deserunt illo dolorum necessitatibus iste repellendus repellat exercitationem distinctio quisquam, quia fuga. Maxime aut natus ea similique quis eaque ratione ex dolor molestiae quam alias itaque tenetur necessitatibus atque unde provident minus, expedita a voluptatem laboriosam suscipit et labore rerum perspiciatis? Perspiciatis reprehenderit nulla ab necessitatibus eius beatae iste odio ipsum non distinctio dolores excepturi, quisquam natus molestiae repellendus odit delectus aliquid nobis aspernatur suscipit numquam dignissimos et! Tenetur, esse reiciendis deserunt asperiores facilis debitis?
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary mt-5">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <!-- Footer Brand -->
+                <div class="col-md-4 text-center text-md-start">
+                    <a class="navbar-brand fw-bold" href="#">Your Pet Your Style</a>
+                    <p class="mt-2">Caring for your furry friends with love and style!</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="col-md-4 text-center">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="nav-link text-dark">Home</a></li>
+                        <li><a href="register.html" class="nav-link text-dark">Register</a></li>
+                        <li><a href="services.html" class="nav-link text-dark">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="mb-1">📍 Fluffy Pupperoni Ave, Orlando, FL, 12345</p>
+                    <p class="mb-0">📞 (555) 123-4567</p>
+                    <p>✉️ contact@yourpetyourstyle.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">Your Pet, Your Style | Tic Tac Torres</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
