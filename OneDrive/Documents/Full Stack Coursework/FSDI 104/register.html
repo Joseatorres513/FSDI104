@@ -4,84 +4,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Your Pet Your Style</title>
+    <style>
+        /* Bootstrap Issues - googled to make fit page */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styling - googled*/
+        header {
+            z-index: 1;
+        }
+
+        /* Main content with background image - learning curve */
+        main {
+            flex: 1; /* Push the footer to the bottom */
+            background-image: url('./img/background.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px;
+        }
+
+        /* Used copilot to find the semi-transparent color */
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer styling - used copilot for this workaround*/
+        footer {
+            background-color: #f8f9fa; /* Bootstrap light background */
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Your Pet Your Style</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
 
 <body>
-    <main class="container">
-        <h2>Register</h2>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Your Pet Your Style</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Section to display the total pet count -->
-        <section id="pet-count">
-            <h2>Total Pets Registered: <span id="petNumbersDisplay">0</span></h2>
-        </section>
+    <!-- Main Content -->
+    <main>
+        <div class="container content-container">
+            <h2 class="text-center">Register</h2>
+            <div class="container-sm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="txtName">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Age:</label>
+                            <input type="text" class="form-control" id="txtAge">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Gender:</label>
+                            <input type="text" class="form-control" id="txtGender">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Breed:</label>
+                            <input type="text" class="form-control" id="txtBreed">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Service:</label>
+                            <select class="form-select" id="txtService">
+                                <option value="" disable selected>-- select a service --</option>
+                                <option value="Grooming">Grooming</option>
+                                <option value="Vaccines">Vaccines</option>
+                                <option value="Nails">Nails</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Type:</label>
+                            <select class="form-control" id="txtType">
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Bird">Bird</option>
+                            </select>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Color of Pet:</label>
+                        <select class="form-control" id="txtColor">
+                            <option value="white">White ⬜</option>
+                            <option value="black">Black ⬛</option>
+                            <option value="brown">Brown 🟫</option>
+                            <option value="blue">Blue 🟦</option>
+                            <option value="yellow">Yellow 🟨</option>
+                            <option value="multi-color">Multi 🏳️‍🌈</option>
+                            <option value="other">Other 🎨</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-dark me-2" onclick="register()">Register</button>
+                <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+            </div>
 
-        <!-- Section to display the list of registered pet names -->
-        <section id="pet-list">
-            <h2>Registered Pets</h2>
-            <ul id="petNamesList"></ul>
-        </section>
-
-        <!-- Section to display the average age of pets -->
-        <section id="pet-age-average">
-            <h2>Average Age of Pets: <span id="averageAgeDisplay">0</span></h2>
-        </section>
-
-        <!-- Button to trigger the display of pet names -->
-        <button class="btn btn-dark" onclick="displayPetNames()">Display names</button>
+            <!-- Table Section -->
+            <div class="mt-5">
+                <h2>Registered Pets</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Breed</th>
+                            <th>Service</th>
+                            <th>Type</th>
+                            <th>Color</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="petsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
-    <hr>
-    <h2>Registerd Pets</h2>
-    <div class="container">
-    <!-- <div id="pets" class="row"></div> --> 
-    
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Name</th>
-                    <td>Age</td>
-                    <td>Gender</td>
-                    <td>Breed</td>
-                    <td>Service</td>
-                    <td>Type</td>
-                    <td>Action</td>
-                </tr>
-            </thead>
-            <tbody id="pets">
+    <!-- Footer -->
+    <footer class="bg-body-tertiary mt-5">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <!-- Footer Info -->
+                <div class="col-md-4 text-center text-md-start">
+                    <a class="navbar-brand fw-bold" href="#">Your Pet Your Style</a>
+                    <p class="mt-2">Caring for your furry friends with love and style!</p>
+                </div>
 
-            </tbody>
-        </table>  
-    </div>
+                <!-- Navigation Links -->
+                <div class="col-md-4 text-center">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="nav-link text-dark">Home</a></li>
+                        <li><a href="register.html" class="nav-link text-dark">Register</a></li>
+                        <li><a href="#" class="nav-link text-dark">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="mb-1">📍 Fluffy Pupperoni Ave, Orlando, FL, 12345</p>
+                    <p class="mb-0">📞 (555) 123-4567</p>
+                    <p>✉️ contact@yourpetyourstyle.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">Your Pet Your Style | Tic Tac Torres</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
-
 </body>
 
 </html>
