@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bg-gray{
+            background: gray !important;
+        }
+
+        .bg-tomato {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Practice</h1>    
+
+    <p id="red">First Paragraph</p>
+
+    <p id="blue" class="with-border">Second Paragraph</p>
+
+    <p class="bg-tomato">Third Paragraph</p>
+
+    <div>
+        <input type="text" id="testInput">
+        <button id="btnRegister">Register</button>
+    </div>
+
+    <div id="results">My results:</div>
+
+    <br>
+
+    <button id="newBtn">Click Me!</button>
+
+    <br>
+    <h2 id="user-name">Jose Torres</h2>
+
+    <button class="btn btn-dark" onclick="showName()">
+        Show user name
+    </button>
+
+    <button class="btn btn-dark" onclick="hideName()">
+        Hide user name
+    </button>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./scripts/jqueryPractice.js"></script>
+</body>
+</html>

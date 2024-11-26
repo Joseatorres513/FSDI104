@@ -20,14 +20,24 @@ function Pet(name, age, gender, breed, service, type, color) {
 }
 
 //validations
-function isValid(pet) {
+/*function isValid(pet) {
     let validation = true;
     let inputName = document.getElementById("txtName");
     let inputAge = document.getElementById("txtAge");
     let inputGender = document.getElementById("txtGender");
     let inputBreed = document.getElementById("txtBreed");
     let inputService = document.getElementById("txtService");
-    let inputColor = document.getElementById("txtColor");
+    let inputColor = document.getElementById("txtColor"); */
+
+    // Register function with notification using jQuery
+function register() {
+    let inputName = $("#txtName").val();
+    let inputAge = $("#txtAge").val();
+    let inputGender = $("#txtGender").val();
+    let inputBreed = $("#txtBreed").val();
+    let inputService = $("#txtService").val();
+    let inputType = $("#txtType").val();
+    let inputColor = $("#txtColor").val();
 
     if (pet.name == "") {
         validation = false;

@@ -64,10 +64,10 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="register.html">Register</a>
+                            <a class="nav-link" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="register.html">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -150,6 +150,8 @@
                 <button class="btn btn-dark me-2" onclick="register()">Register</button>
                 <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
             </div>
+            <!-- Notification for registration -->
+            <div id="petNotification" style="display:none; color: green;" class="text-center mt-3"></div>
 
             <!-- Table Section -->
             <div class="mt-5">
@@ -207,6 +209,7 @@
 
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
