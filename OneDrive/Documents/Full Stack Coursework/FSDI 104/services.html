@@ -38,13 +38,15 @@
     <div class="container content-container">
         <div class="card">
             <div class="card-body">
-                <div id="serviceRegistrationForm" action="#">
+                <div id="serviceRegistrationForm">
                     <h3>Register New Service</h3>
                     <label for="serviceDescription">Description:</label>
                     <input type="text" id="txtDescription" name="txtDescription" required>
+                    <span id="descRequiredText" style="display:none; color:red;">Description is required.</span>
                     <br>
                     <label for="servicePrice">Price:</label>
                     <input type="number" id="txtPrice" name="txtPrice" required>
+                    <span id="priceRequiredText" style="display:none; color:red;">Price is required.</span>
                     <br>
                     <button id="btnRegister">Register Service</button>
                     <div id="serviceNotification" style="display:none; color: green;"></div>
@@ -52,43 +54,44 @@
             </div>
         </div>
     </div>
-<!-- Footer -->
-<footer class="bg-body-tertiary mt-5">
-    <div class="container-fluid py-3">
-        <div class="row">
-            <!-- Footer Brand -->
-            <div class="col-md-4 text-center text-md-start">
-                <a class="navbar-brand fw-bold" href="#">Your Pet, Your Style</a>
-                <p class="mt-2">Caring for your furry friends with love and style!</p>
-            </div>
 
-            <!-- Navigation Links -->
-            <div class="col-md-4 text-center">
-                <ul class="list-unstyled">
-                    <li><a href="index.html" class="nav-link text-dark">Home</a></li>
-                    <li><a href="services.html" class="nav-link text-dark">Services</a></li>
-                    <li><a href="register.html" class="nav-link text-dark">Register</a></li>
-                </ul>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-body-tertiary mt-5">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <!-- Footer Brand -->
+                <div class="col-md-4 text-center text-md-start">
+                    <a class="navbar-brand fw-bold" href="#">Your Pet, Your Style</a>
+                    <p class="mt-2">Caring for your furry friends with love and style!</p>
+                </div>
 
-            <!-- Contact Information -->
-            <div class="col-md-4 text-center text-md-end">
-                <p class="mb-1">📍 Fluffy Pupperoni Ave, Orlando, FL, 12345</p>
-                <p class="mb-0">📞 (555) 123-4567</p>
-                <p>✉️ contact@yourpetyourstyle.com</p>
+                <!-- Navigation Links -->
+                <div class="col-md-4 text-center">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="nav-link text-dark">Home</a></li>
+                        <li><a href="services.html" class="nav-link text-dark">Services</a></li>
+                        <li><a href="register.html" class="nav-link text-dark">Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="mb-1">📍 Fluffy Pupperoni Ave, Orlando, FL, 12345</p>
+                    <p class="mb-0">📞 (555) 123-4567</p>
+                    <p>✉️ contact@yourpetyourstyle.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">Your Pet, Your Style | Tic Tac Torres</p>
             </div>
         </div>
-        <div class="text-center mt-3">
-            <p class="mb-0">Your Pet, Your Style | Tic Tac Torres</p>
-        </div>
-    </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="./scripts/services.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    </div>
+    <script src="./scripts/storeManager.js"></script>
 </body>
 
 </html>

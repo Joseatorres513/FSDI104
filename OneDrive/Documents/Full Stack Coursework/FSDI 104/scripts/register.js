@@ -6,8 +6,7 @@ let petSalon = {
         street: "Breezy Street",
         zip: "22500"
     }
-};
-
+}
 //object constructor
 function Pet(name, age, gender, breed, service, type, color) {
     this.name = name;

@@ -1,52 +1,58 @@
-console.log ("services");
-let services = [];
+console.log("services");
 
-//constructor Service
+let services = [];
+let inputDescription = $("#txtDescription");
+let inputPrice = $("#txtPrice");
+
+$("#txtDescription").val(""); // Clear input
+$("#txtPrice").val(""); // Clear input
+
+// Constructor for Service
 function Service(description, price) {
-    //
-        this.description = description;
-        this.price = price;
+    this.description = description;
+    this.price = price;
 }
 
-//validations
+// Validations
 function validService(service) {
     let isValidDescription = true;
     let isValidPrice = true;
 
-    if (service.description == "") {
+    if (service.description === "") {
         isValidDescription = false;
         $("#txtDescription").addClass("error");
-        $("#descRequiredText").show();
+        $("#descRequiredText").show(); // Ensure this element exists in HTML
     } else {
         isValidDescription = true;
         $("#txtDescription").removeClass("error");
         $("#descRequiredText").hide();
     }
 
-    // service.price validation
+    if (service.price === "") {
+        isValidPrice = false;
+        $("#txtPrice").addClass("error");
+        $("#priceRequiredText").show(); // Ensure this element exists in HTML
+    } else {
+        isValidPrice = true;
+        $("#txtPrice").removeClass("error");
+        $("#priceRequiredText").hide();
+    }
 
     return isValidDescription && isValidPrice;
 }
 
-//use jQuery
+// Use jQuery to register
 function register() {
-    let inputDescription = $("#txtDescription").val();
-    let inputPrice = $("#txtPrice").val();
-    
-    
-    let newService = new Service(inputDescription, inputPrice);
-    console.log("newService = ", newService);
-
-    $("#txtDescription").val(""); //clear input
-    $("#txtPrice").val(""); //clear input
-
-
+    let newService = new Service(inputDescription.val(), inputPrice.val());
+    if (validService(newService)) {
+        save(newService); // Assuming `save` is defined in `storeManager.js`
+        $("input").val(""); // Clear the form inputs
+    }
 }
 
+// Initialize
 function init() {
-    //hook events
-    $("#btnRegister").on("click", register)
-
+    $("#btnRegister").on("click", register);
 }
 
-window.onload = init;
+window.onload = init; // Kept window.onload as requested
