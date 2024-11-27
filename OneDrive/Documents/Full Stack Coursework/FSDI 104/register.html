@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!--  Bootstrap stylesheet for responsive design and styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!--  Custom stylesheet for additional styles -->
     <link rel="stylesheet" href="./styles/index.css">
     <title>Your Pet Your Style</title>
     <style>
-        /* Bootstrap Issues - googled to make fit page */
+        /*  General body layout adjustments */
         body {
             margin: 0;
             display: flex;
@@ -16,14 +18,14 @@
             min-height: 100vh;
         }
 
-        /* Header styling - googled*/
+        /*  Ensure the header stays on top of the page */
         header {
             z-index: 1;
         }
 
-        /* Main content with background image - learning curve */
+        /*  Background image setup for the main content area */
         main {
-            flex: 1; /* Push the footer to the bottom */
+            flex: 1; /* Makes main content push the footer to the bottom */
             background-image: url('./img/background.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -31,7 +33,7 @@
             padding: 20px;
         }
 
-        /* Used copilot to find the semi-transparent color */
+        /*  Styling for a semi-transparent content container */
         .content-container {
             background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
             border-radius: 10px;
@@ -39,9 +41,9 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Footer styling - used copilot for this workaround*/
+        /*  Footer styling to maintain consistent background and spacing */
         footer {
-            background-color: #f8f9fa; /* Bootstrap light background */
+            background-color: #f8f9fa; /* Light Bootstrap background color */
             text-align: center;
             padding: 15px;
         }
@@ -49,15 +51,18 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!--  Website Header Section -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
+                <!--  Website Branding -->
                 <a class="navbar-brand" href="#">Your Pet Your Style</a>
+                <!--  Mobile Navigation Toggle -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--  Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -75,11 +80,15 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!--  Main Content Section -->
     <main>
+        <!--  Form container with semi-transparent styling -->
         <div class="container content-container">
             <h2 class="text-center">Register</h2>
+
+            <!--  Pet Registration Form -->
             <div class="container-sm">
+                <!--  Row 1: Input for Name and Age -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
@@ -94,6 +103,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--  Row 2: Input for Gender and Breed -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
@@ -108,6 +119,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--  Row 3: Dropdown for Service and Type -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
@@ -127,10 +140,12 @@
                                 <option value="Dog">Dog</option>
                                 <option value="Cat">Cat</option>
                                 <option value="Bird">Bird</option>
-                            </select>    
+                            </select>
                         </div>
                     </div>
                 </div>
+
+                <!--  Row 4: Dropdown for Pet Color -->
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label class="form-label">Color of Pet:</label>
@@ -146,14 +161,17 @@
                     </div>
                 </div>
             </div>
+
+            <!--  Buttons for Register and Clear -->
             <div class="text-center mt-4">
                 <button class="btn btn-dark me-2" onclick="register()">Register</button>
                 <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
             </div>
-            <!-- Notification for registration -->
+
+            <!--  Notification Message -->
             <div id="petNotification" style="display:none; color: green;" class="text-center mt-3"></div>
 
-            <!-- Table Section -->
+            <!--  Registered Pets Table -->
             <div class="mt-5">
                 <h2>Registered Pets</h2>
                 <table class="table">
@@ -175,17 +193,17 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!--  Footer Section -->
     <footer class="bg-body-tertiary mt-5">
         <div class="container-fluid py-3">
             <div class="row">
-                <!-- Footer Info -->
+                <!--  Footer Info -->
                 <div class="col-md-4 text-center text-md-start">
                     <a class="navbar-brand fw-bold" href="#">Your Pet Your Style</a>
                     <p class="mt-2">Caring for your furry friends with love and style!</p>
                 </div>
 
-                <!-- Navigation Links -->
+                <!--  Navigation Links -->
                 <div class="col-md-4 text-center">
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="nav-link text-dark">Home</a></li>
@@ -194,7 +212,7 @@
                     </ul>
                 </div>
 
-                <!-- Contact Information -->
+                <!--  Contact Information -->
                 <div class="col-md-4 text-center text-md-end">
                     <p class="mb-1">📍 Fluffy Pupperoni Ave, Orlando, FL, 12345</p>
                     <p class="mb-0">📞 (555) 123-4567</p>
@@ -207,6 +225,7 @@
         </div>
     </footer>
 
+    <!--  Scripts Section -->
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

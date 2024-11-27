@@ -9,6 +9,7 @@
     <title>Your Pet, Your Style</title>
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -35,22 +36,52 @@
     </header>
     <h1 class="text-center">Services</h1>
 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="./img/services6.jpg" alt="Services6" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="./img/services7.jpg" alt="Services7" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="./img/services8.jpg" alt="Services8" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
     <div class="container content-container">
-        <div class="card">
+        <div class="card mt-5">
             <div class="card-body">
                 <div id="serviceRegistrationForm">
-                    <h3>Register New Service</h3>
-                    <label for="serviceDescription">Description:</label>
-                    <input type="text" id="txtDescription" name="txtDescription" required>
-                    <span id="descRequiredText" style="display:none; color:red;">Description is required.</span>
-                    <br>
-                    <label for="servicePrice">Price:</label>
-                    <input type="number" id="txtPrice" name="txtPrice" required>
-                    <span id="priceRequiredText" style="display:none; color:red;">Price is required.</span>
-                    <br>
-                    <button id="btnRegister">Register Service</button>
-                    <div id="serviceNotification" style="display:none; color: green;"></div>
+                    <h3 class="card-title">Register New Service</h3>
+                    <div class="mb-3">
+                        <label for="serviceDescription" class="form-label">Description:</label>
+                        <input type="text" id="txtDescription" name="txtDescription" class="form-control" required>
+                        <span id="descRequiredText" class="text-danger" style="display:none;">Description is required.</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="servicePrice" class="form-label">Price:</label>
+                        <input type="number" id="txtPrice" name="txtPrice" class="form-control" required>
+                        <span id="priceRequiredText" class="text-danger" style="display:none;">Price is required.</span>
+                    </div>
+                    <button id="btnRegister" class="btn btn-primary">Register Service</button>
+                    <div id="serviceNotification" class="mt-3 text-success" style="display:none;"></div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="./img/services1.jpg" alt="Services1" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="./img/services5.jpg" alt="Services5" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="./img/services3.jpg" alt="Services3" class="img-fluid rounded">
             </div>
         </div>
     </div>
