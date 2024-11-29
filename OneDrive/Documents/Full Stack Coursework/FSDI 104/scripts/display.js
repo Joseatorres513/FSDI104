@@ -34,8 +34,9 @@ function displayInfo() {
     let grooming = 0;
     let vaccines = 0;
     let nails = 0;
+    console.log("pets...", pets);
 
-    totalDiv.innerHTML = pets.length;// total pets
+    totalDiv.innerHTML += pets.length;// total pets
 
     for (let i = 0; i < pets.length; i++) {
         console.log(pets[i].service)

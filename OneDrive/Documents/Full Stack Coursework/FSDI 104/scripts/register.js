@@ -137,6 +137,23 @@ function deletePet(index) {
     console.log("Deleted pet at index:", index);
 }
 
+//Get Services from Local Storage
+function getServices() {
+    console.log("getServices function");
+    let services = read();
+    console.log(services);
+    let option = "";
+
+    for(let i=0; i<services.length; i++){
+        let service = services[i];
+
+        option +=`
+            <option value="${service.description}">${service.description}</option>
+            `
+    }
+    $("#txtService").append(option);
+}
+
 // Initialization function
 function init() {
     console.log("testing");
@@ -147,7 +164,25 @@ function init() {
 
     pets.push(pet1, pet2, pet3);
 
+
+
     displayRow();
+    console.log("***");
+    
+    getServices();
+
+$("#mode").on("click", function () {
+    // Check if the body is in dark mode using a simpler approach
+    if ($("body").css("background-color") === "rgb(0, 0, 0)" || $("body").hasClass("dark-mode")) {
+        console.log("*** Switching to Light Mode ***");
+        $("body").css({ "background-color": "white", "color": "black" }).removeClass("dark-mode");
+        $(this).text("Dark mode");
+    } else {
+        console.log("*** Switching to Dark Mode ***");
+        $("body").css({ "background-color": "black", "color": "gray" }).addClass("dark-mode");
+        $(this).text("Light mode");
+    }
+});
 }
 
 window.onload = init; // Wait to render the HTML

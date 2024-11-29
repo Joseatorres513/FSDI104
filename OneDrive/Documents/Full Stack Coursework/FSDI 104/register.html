@@ -76,6 +76,7 @@
                         </li>
                     </ul>
                 </div>
+                <button id="mode" class="btn bg-dark text-white">Dark Mode</button>
             </div>
         </nav>
     </header>
@@ -126,10 +127,10 @@
                         <div class="mb-3">
                             <label class="form-label">Service:</label>
                             <select class="form-select" id="txtService">
-                                <option value="" disable selected>-- select a service --</option>
-                                <option value="Grooming">Grooming</option>
+                                <option value="" disable selected>-- select a service --</option> -->
+                                <!-- <option value="Grooming">Grooming</option>
                                 <option value="Vaccines">Vaccines</option>
-                                <option value="Nails">Nails</option>
+                                <option value="Nails">Nails</option> -->
                             </select>
                         </div>
                     </div>
@@ -172,6 +173,13 @@
             <div id="petNotification" style="display:none; color: green;" class="text-center mt-3"></div>
 
             <!--  Registered Pets Table -->
+            <p id="total">Total:   </p>
+            <p id="gtotal">Grooming Total:   </p>
+            <p id="vtotal">Vaccination Total:   </p>
+            <p id="ntotal">Nails Total:   </p>
+
+
+
             <div class="mt-5">
                 <h2>Registered Pets</h2>
                 <table class="table">
@@ -226,9 +234,10 @@
     </footer>
 
     <!--  Scripts Section -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./scripts/storeManager.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
