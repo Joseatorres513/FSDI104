@@ -20,47 +20,37 @@ function Pet(name, age, gender, breed, service, type, color) {
 }
 
 //validations
-/*function isValid(pet) {
+function isValid(pet) {
     let validation = true;
     let inputName = document.getElementById("txtName");
     let inputAge = document.getElementById("txtAge");
     let inputGender = document.getElementById("txtGender");
     let inputBreed = document.getElementById("txtBreed");
     let inputService = document.getElementById("txtService");
-    let inputColor = document.getElementById("txtColor"); */
+    let inputColor = document.getElementById("txtColor");
 
-    // Register function with notification using jQuery
-function register() {
-    let inputName = $("#txtName").val();
-    let inputAge = $("#txtAge").val();
-    let inputGender = $("#txtGender").val();
-    let inputBreed = $("#txtBreed").val();
-    let inputService = $("#txtService").val();
-    let inputType = $("#txtType").val();
-    let inputColor = $("#txtColor").val();
-
-    if (pet.name == "") {
+    if (pet.name === "") {
         validation = false;
         inputName.classList.add("error");
     }
 
-    if (pet.age == "") {
+    if (pet.age === "") {
         validation = false;
         inputAge.classList.add("error");
     }
-    if (pet.gender == "") {
+    if (pet.gender === "") {
         validation = false;
         inputGender.classList.add("error");
     }
-    if (pet.breed == "") {
+    if (pet.breed === "") {
         validation = false;
         inputBreed.classList.add("error");
     }
-    if (pet.service == "") {
+    if (pet.service === "") {
         validation = false;
         inputService.classList.add("error");
     }
-    if (pet.color == "") {
+    if (pet.color === "") {
         validation = false;
         inputColor.classList.add("error");
     }
@@ -94,6 +84,7 @@ function register() {
     }
 }
 
+// Clear form inputs
 function clearForm() {
     document.getElementById("txtName").value = "";
     document.getElementById("txtAge").value = "";
@@ -140,18 +131,18 @@ function deletePet(index) {
 //Get Services from Local Storage
 function getServices() {
     console.log("getServices function");
-    let services = read();
+    let services = JSON.parse(localStorage.getItem("services")) || [];
     console.log(services);
     let option = "";
 
-    for(let i=0; i<services.length; i++){
+    for (let i = 0; i < services.length; i++) {
         let service = services[i];
 
-        option +=`
+        option += `
             <option value="${service.description}">${service.description}</option>
-            `
+        `;
     }
-    $("#txtService").append(option);
+    $("#txtService").html(option);
 }
 
 // Initialization function
@@ -164,24 +155,27 @@ function init() {
 
     pets.push(pet1, pet2, pet3);
 
-
-
     displayRow();
     console.log("***");
-    
-    getServices();
 
+    // Populate Services dropdown
+getServices();
+
+displayRow();
+console.log("***");
+
+getServices();
 $("#mode").on("click", function () {
-    // Check if the body is in dark mode using a simpler approach
-    if ($("body").css("background-color") === "rgb(0, 0, 0)" || $("body").hasClass("dark-mode")) {
-        console.log("*** Switching to Light Mode ***");
-        $("body").css({ "background-color": "white", "color": "black" }).removeClass("dark-mode");
-        $(this).text("Dark mode");
-    } else {
-        console.log("*** Switching to Dark Mode ***");
-        $("body").css({ "background-color": "black", "color": "gray" }).addClass("dark-mode");
-        $(this).text("Light mode");
-    }
+// Check if the body is in dark mode using a simpler approach
+if ($("body").css("background-color") === "rgb(0, 0, 0)" || $("body").hasClass("dark-mode")) {
+    console.log("*** Switching to Light Mode ***");
+    $("body").css({ "background-color": "white", "color": "black" }).removeClass("dark-mode");
+    $(this).text("Dark mode");
+} else {
+    console.log("*** Switching to Dark Mode ***");
+    $("body").css({ "background-color": "black", "color": "gray" }).addClass("dark-mode");
+    $(this).text("Light mode");
+}
 });
 }
 
